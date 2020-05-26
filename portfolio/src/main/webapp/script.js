@@ -26,3 +26,15 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3500);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("header").style.display = "block"
+    
+
+    document.getElementById("footer").style.display = "block";
+}
