@@ -1,88 +1,8 @@
-#landing
-{
-    margin-top: 100px;
-    font-family: 'Montserrat', sans-serif;
-	color:#dea5a4;
-     text-align: center;
-     margin-bottom: 200px;
-     margin-right: 300px;
-     margin-left: 300px;
-     
-}
-
-.hello{
-    text-align: center;
-	font-size: 5rem;
-	font-family: 'Montserrat', sans-serif;
-	color:#dea5a4;
-}
-
-#about
-{
-    margin-top: 100px;
-    font-family: 'Montserrat', sans-serif;
-	color:#dea5a4;
-     text-align: center;
-     margin-bottom: 200px;
-     margin-right: 300px;
-     margin-left: 300px;
-     
-}
-
-#work
-{
-    margin-top: 100px;
-    font-family: 'Montserrat', sans-serif;
-	color:#dea5a4;
-     text-align: left;
-     margin-bottom: 200px;
-     margin-right: 300px;
-     margin-left: 300px;
-     
-}
-
-body
-{
+body{
       background-color: black;
 }
 
-p.about{
-
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 auto;
-    text-align: center;
-	font-size: 2rem !important;
-	color:#dea5a4;
-	margin-left:60px !important;
-	margin-top: 0px;
-	line-height: 20px
-}
-
-#learnmore{
-    border: 2px solid #dea5a4;
-    background-color: black;
-    text-align: center;
-    color: #dea5a4;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-}
-
-#demo {
-    text-align: center;
-    color: #dea5a4;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-
-}
-
-.abt{
-    margin-left:60px !important;
-    text-align: center;
-	font-size: 5rem;
-	font-family: 'Montserrat', sans-serif;
-	color:#dea5a4;
-}
-
+/*column and row objects*/
 .column {
   float: left;
   width: 50%;
@@ -95,50 +15,164 @@ p.about{
   clear: both;
 }
 
+/*section headers*/
+.sectionheader
+{
+    font-family: 'Montserrat'; color: white;
+    font-size: 60px;
+    text-align: center;
+}
+
+/*navbar*/
+#navbar {
+margin-top: 50px;
+  overflow: hidden;
+  background-color:transparent;
+  font-family: 'Montserrat', sans-serif;
+}
+/*navbar section*/
+#navbar a {
+  float: right;
+  display: block;
+  color: white;
+  opacity: 75%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+    opacity: 100%
+}
+
+#navbar a.active {
+  color: #dea5a4;
+  background-color:transparent;
+}
+
+/*sticking the navbar to the top*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*landing page*/
+#landing
+{
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+	color:#dea5a4;
+     text-align: center;
+     margin-bottom: 200px;
+     margin-right: 300px;
+     margin-left: 300px;
+     
+}
+
+.landheading{
+    text-align: center;
+	font-size: 5rem;
+	font-family: 'Montserrat', sans-serif;
+	color:#dea5a4;
+}
+
+.subheading{
+
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+	font-size: 2rem !important;
+	color:#dea5a4;
+	margin-left:60px !important;
+	margin-top: 0px;
+	line-height: 20px
+}
+
+/*about section*/
+#about
+{
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+	color:#dea5a4;
+     text-align: center;
+     margin-bottom: 200px;
+     margin-right: 300px;
+     margin-left: 300px;
+     
+}
+
+/*bio paragraph*/
+.bio {
+    text-align: center;
+    color: #dea5a4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+/*work section*/
+#work
+{
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+	color:#dea5a4;
+     text-align: left;
+     margin-bottom: 200px;
+     margin-right: 300px;
+     margin-left: 300px;
+     
+}
+
+/*Job Title*/
 .jobtitle{
     color: #dea5a4;
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
 }
 
-.jobdescp
-{
+/*Job description*/
+.jobdescp{
     color: #dea5a4;
     font-family: 'Montserrat', sans-serif;
 }
 
-#gt, #ft, #ot
-{
+/*Company titles*/
+#googletitle, 
+#fidelitytitle, 
+#ovttitle{
     opacity: 50%
 }
 
-#gt:hover, #ft:hover, #ot:hover
-{
-    opacity: 100%
-}
-
-#gt:hover + #gd
-{
-    opacity: 100%
-}
-
-#gd, #od, #fd
-{
+/*company descriptions*/
+#gdescp,
+#ovtdescp, 
+#fidelitydescp{
     opacity: 0%;
 }
 
-#ft:hover + #fd
-{
+/*company title hovering*/
+#googletitle:hover, 
+#fidelitytitle:hover, 
+#ovttitle:hover{
     opacity: 100%
 }
 
-#ot:hover + #od
-{
+/*company description hovering*/
+#googletitle:hover + #googledescp{
     opacity: 100%
 }
 
-#projects
-{
+#fidelitytitle:hover + #fidelitydescp{
+    opacity: 100%
+}
+
+#ovttitle:hover + #ovtdescp{
+    opacity: 100%
+}
+
+/*projects section*/
+#projects{
     margin-top: 100px;
     font-family: 'Montserrat', sans-serif;
 	color:#dea5a4;
@@ -152,21 +186,20 @@ p.about{
 /* Slideshow container */
 .slideshow-container {
     top:10px;
-  position: relative;
-  background: black;
+    position: relative;
+    background: transparent;
 }
 
 /* Slides */
-.mySlides {
+.slides {
   display: none;
-  /* padding: 60px; */
   text-align: center;
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev, 
+.next {
   cursor: pointer;
-  /* position: absolute; */
   top: 50%;
   width: auto;
   margin-top: -30px;
@@ -178,8 +211,7 @@ p.about{
   user-select: none;
 }
 
-.prev
-{
+.prev{
     left:0;
     position:absolute;
 }
@@ -192,7 +224,8 @@ p.about{
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover, 
+.next:hover {
   background-color: rgba(0,0,0,0.8);
   color: white;
 }
@@ -217,23 +250,26 @@ p.about{
 }
 
 /* Add a background color to the active dot/circle */
-.active, .dot:hover {
+.active, 
+.dot:hover {
   background-color: #717171;
 }
 
 /* Add an italic font style to all quotes */
-.projname { font-family: 'Montserrat', sans-serif; color: #dea5a4; font-size: 50px}
-
-/* Add a blue color to the author */
-.projdesc {font-family: 'Montserrat'; color: #fdfd96; font-size: 20px}
-
-.sectionheader
-{
-    font-family: 'Montserrat'; color: white;
-    font-size: 60px;
-    text-align: center;
+.projname { 
+    font-family: 'Montserrat', sans-serif; 
+    color: #dea5a4;
+    font-size: 50px
 }
 
+/* Add a blue color to the author */
+.projdesc {
+    font-family: 'Montserrat'; 
+    color: #fdfd96; 
+    font-size: 20px
+}
+
+/*sliding words effect*/
 .marquee {
     padding-top: 0%;
     width: 50%;
@@ -254,6 +290,20 @@ p.about{
     100% { transform: translate(-100%, 0); }
 }
 
+/*contact section*/
+#contact
+{
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+	color:#dea5a4;
+     text-align: left;
+     margin-bottom: 200px;
+     margin-right: 300px;
+     margin-left: 300px;
+     
+}
+
+/*icons*/
 .icons{
     text-align: center;
 	font-size: 2.5rem;
@@ -269,14 +319,3 @@ p.about{
 	opacity: 75%
 }
 
-#contact
-{
-    margin-top: 100px;
-    font-family: 'Montserrat', sans-serif;
-	color:#dea5a4;
-     text-align: left;
-     margin-bottom: 200px;
-     margin-right: 300px;
-     margin-left: 300px;
-     
-}

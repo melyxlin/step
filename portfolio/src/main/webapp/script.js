@@ -24,12 +24,24 @@ window.addEventListener('scroll', function() {
   typeWriter();
 });
 
+//function for typing effect on screen
 function typeWriter() {
-    // document.getElementById("learnmore").style.display = "none";
-  if (i < txt.length) {
+    if (i < txt.length) {
     document.getElementById("demo").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
 }
 
+//function to make navabar contents active or not
+function clickSingleA(a)
+{
+    items = document.querySelectorAll('.active');
+    
+    if(items.length) 
+    {
+        items[0].className = 'single';
+    }
+
+    a.className = 'active';
+}

@@ -3,147 +3,193 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <head>
         <meta charset="UTF-8">
+        
         <title>My Portfolio</title>
+        
         <link rel="stylesheet" href="style.css">
-        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-  integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
         <script src="script.js"></script>
     </head>
     <body >
+        <!-- Navbar -->
+        <div id="navbar">
+            <a style="float:left; color:white; padding-left:20px; font-size:30px;">Melissa Lin </a>
+            <a class="single" href="#contact"onclick="clickSingleA(this)">contact</a>
+            <a href="#projects" class="single"onclick="clickSingleA(this)">projects</a>
+            <a href="#work" class="single" onclick="clickSingleA(this)">work</a>
+            <a href="#about" class="single" onclick="clickSingleA(this)">about</a>
+            <a href="#landing" class="single" onclick="clickSingleA(this)">home</a>
+        </div>
+        
+        <!-- Landing Page -->
         <div id="landing">
             <div class="row">
                 <div>
-                    <h1 class="hello" >Melissa Lin</h1>
+                    <h1 class="landheading">Melissa Lin</h1>
                 </div>
             </div>
             <div class "row" style="text-align:center; margin-bottom:10px;">
-                                <img src="images/26369313.jpeg" style="border-radius:50%">
-                            </div>
+                <img src="images/26369313.jpeg" alt="Melissa" style="border-radius:50%">
+            </div>
             <div class="row">
-                <p class="about"><span style="color:#b19cd9">Bostonian.</span> <span style=" color:#fdfd96">Coder.</span> <span style="color:#b2d8d8">Noodles Enthusiast.</p>
-                </div>
+                <p class="subheading"><span style="color:#b19cd9">Bostonian.</span> <span style=" color:#fdfd96">Coder.</span> <span style="color:#b2d8d8">Noodles Enthusiast.</p>
+            </div>
         </div>
 
+        <!-- About -->
         <div id = "about" >
-            <h1 id="demo"></h1> 
+            <h1 class="bio"></h1> 
         </div>
 
+        <!-- Work -->
         <div id="work">
             <h1 class = "sectionheader">WORK</h1>
+            <!-- Google Row -->
             <div class="row">
-                <div class="column" id="gt" >
+                <div class="column" id="googletitle" >
                     <h2 class="jobtitle">Google</h2>
                 </div>
-                <div class = "column" id="gd">
+                <div class = "column" id="googledescp">
                     <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> STEP Intern</p>
                     <p class = "jobdescp" style="color:#b2d8d8; font-size: 15px"> May 2020 - Aug 2020</p>
-                    <ul class = "jobdescp"style="color:#fdfd96"> <li>Working with the Google Cloud Security Team.</li>
-
-</ul>
-                    </div>
+                    <ul class = "jobdescp"style="color:#fdfd96"> 
+                        <li>Working with the Google Cloud Security Team.</li>
+                    </ul>
                 </div>
+            </div>
             
-
+            <!-- Fidelity Row -->
             <div class="row">
-                <div class="column" id ="ft">
+                <div class="column" id ="fidelitytitle">
                     <h2 class="jobtitle">Fidelity Investements</h2>
                 </div>
-                <div class = "column" id = "fd">
+                <div class = "column" id = "fidelitydescp">
                     <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> SWE Intern</p>
                     <p class = "jobdescp" style="color:#b2d8d8; font-size: 15px"> May 2019 - Aug 2019</p>
-                    <ul class = "jobdescp"style="color:#fdfd96"> <li>Built a testreporting application for Fidelity’s QA department utilizing Java
-Spring and SQL servers for the backend and Angular for the frontend</li>
-  <li>Developed tools and frameworks in Java for Fidelity’s electronic trading
-platform to facilitate automated testing,reducing the time to report bugs by
-20%</li>
-</ul>
+                    <ul class = "jobdescp"style="color:#fdfd96"> 
+                        <li>Built a testreporting application for Fidelity’s QA department utilizing Java Spring and SQL servers for the backend and Angular for the frontend</li>
+                        <li>Developed tools and frameworks in Java for Fidelity’s electronic trading platform to facilitate automated testing,reducing the time to report bugs by 20%</li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- OVT Row -->
             <div class="row">
-                <div class="column" id = "ot">
+                <div class="column" id = "ovttitle">
                     <h2 class ="jobtitle">Open Vision Technology</h2>
-                    </div>
-                <div class = "column" id = "od">
+                </div>
+                <div class = "column" id = "ovtdescp">
                     <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> Technical Intern</p>
                     <p class = "jobdescp" style="color:#b2d8d8; font-size: 15px"> Jun 2018 - Aug 2019</p>
-                    <ul class = "jobdescp"style="color:#fdfd96"> <li>Developed and reviewed software for semiconductor wafer handling demo
-robots to use at various client meetings and showcases using C++</li>
-</ul>
+                    <ul class = "jobdescp"style="color:#fdfd96">
+                        <li>Developed and reviewed software for semiconductor wafer handling demo robots to use at various client meetings and showcases using C++</li>
+                    </ul>
                 </div>
             </div>
 
         </div>
 
+        <!-- Projects -->
         <div id="projects">
+        
             <!-- Slideshow container -->
-<div class="slideshow-container">
-<h1 class = "sectionheader">PROJECTS</h1>
-  <!-- Full-width slides/quotes -->
-  <div class="mySlides">
-    <p class = "projname">1984 Graphics</p>
-    <p class="projdesc"> Developed application for theatre productions in which allowed non-technical users to create graphics that could interact in real-time with actors in a theatre production.</p>
-  <div class="marquee">
-	<p>  Processing&nbsp; OpenCV</p>
-</div>
-  </div>
-
-  <div class="mySlides">
-    <p class = "projname">Avatar API</p>
-    <p class="projdesc">An API using the Flask Framwork that holds quantified and structured data from the universe of Avatar the Last Airbender and Legend of Korra.</p>
-    <div class="marquee">
-	<p>  HTML &nbsp;CSS&nbsp; Python&nbsp; Flask &nbsp;Heroku</p>
-</div>
-
-  </div>
-
-  <div class="mySlides">
-    <p class = "projname">Artefatto</p>
-    <p class="projdesc">A website built for BostonHacks. It displays data from past events, the history of BostonHacks, and a list of the current organizers on the team.</p>
-<div class="marquee">
-	<p>  HTML	&nbsp; CSS	&nbsp; JavaScript &nbsp; Bootstrap</p>
-    </div>
-</div>
-
-  <!-- Next/prev buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
+            <div class="slideshow-container">
+                <h1 class = "sectionheader">PROJECTS</h1>
+            
+                <!-- Full-width slides/quotes -->
+                <div class="slides">
+                    <p class = "projname">1984 Graphics</p>
+                    <p class="projdesc"> Developed application for theatre productions in which allowed non-technical users to create graphics that could interact in real-time with actors in a theatre production.</p>
+                    <div class="marquee">
+                        <p>  Processing&nbsp; OpenCV</p>
+                    </div>
+                </div>
+            
+                <div class="slides">
+                    <p class = "projname">Avatar API</p>
+                    <p class="projdesc">An API using the Flask Framwork that holds quantified and structured data from the universe of Avatar the Last Airbender and Legend of Korra.</p>
+                    <div class="marquee">
+                        <p>  HTML &nbsp;CSS&nbsp; Python&nbsp; Flask &nbsp;Heroku</p>
+                    </div>
+                </div>
+            
+                <div class="slides">
+                    <p class = "projname">Artefatto</p>
+                    <p class="projdesc">A website built for BostonHacks. It displays data from past events, the history of BostonHacks, and a list of the current organizers on the team.</p>
+                    <div class="marquee">
+                        <p>HTML	&nbsp; CSS &nbsp; JavaScript &nbsp; Bootstrap</p>
+                    </div>
+                </div>
+            
+                <!-- Next/prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            </div>
 
         </div>
-        <div id= "contact">
+        
+            <!-- Contact -->
+            <div id= "contact">
             <h1 class = "sectionheader">LET'S CHAT!</h1>
+            <!-- Paragraph for icons -->
             <p class="icons">
-        <a href="https://github.com/melyxlin" class="icon"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/melyxlin/" class="icon"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:melyxlin@gmail.com" class="icon"><i class="fas fa-envelope-square"></i></a>
-      </p>
+                <a href="https://github.com/melyxlin" class="icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/melyxlin/" class="icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:melyxlin@gmail.com" class="icon"><i class="fas fa-envelope-square"></i></a>
+            </p>
             
         </div>
+        <!-- Script to for Slideshow -->
         <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+            var slideIndex = 1;
+            showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+            //advances slides
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+            //shows current slides
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  slides[slideIndex-1].style.display = "block";  
-}
-</script>
+            //function to display slide
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }    
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++){
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex-1].style.display = "block";  
+            }
+        </script>
+
+        <!-- Script to make navbar stick -->
+        <script>
+            //Sticks while scrolling
+            window.onscroll = function() {
+                stickyScroll()
+            };
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+    //function to make navbar stick
+    function stickyScroll() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        }
+        else {
+            navbar.classList.remove("sticky");
+        }
+    }
+        </script>
     </body>
 </html>
