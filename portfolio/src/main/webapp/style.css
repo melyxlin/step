@@ -225,7 +225,8 @@ p.about{
 
 .marquee {
     padding-top: 0%;
-    width: auto;
+    width: 50%;
+    margin-left: 200px;
 	line-height: 5px;
 	color:#b19cd9;
     white-space: nowrap;
@@ -240,4 +241,32 @@ p.about{
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
+}
+
+.icons{
+    text-align: center;
+	font-size: 2.5rem;
+	margin-left: 65px;
+}
+
+.icon{
+    color:#dea5a4;
+	opacity: 100%
+}
+
+.icon:hover{
+    color:#dea5a4;
+	opacity: 75%
+}
+
+#contact
+{
+    margin-top: 300px;
+    font-family: 'Montserrat', sans-serif;
+	color:#dea5a4;
+     text-align: left;
+     margin-bottom: 200px;
+     margin-right: 300px;
+     margin-left: 300px;
+     
 }
