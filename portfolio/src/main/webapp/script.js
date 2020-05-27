@@ -15,20 +15,20 @@
 /**
  * Adds a random greeting to the page.
  */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+var i = 0;
+var txt = 'Melissa is a born and raised Bostonian and is a current Junior at Boston University majoring in Computer Science. She is passionate about creating things that can better the lives around her. Her goal is to always build products that makes lives easier and enjoying for everyone. If she is not coding, Melissa can be found running or eating a very big bowl of instant noodle (preferably Shin).';
+var speed = 400;
+
+window.addEventListener('scroll', function() {
+  typeWriter();
+});
+
+function typeWriter() {
+    // document.getElementById("learnmore").style.display = "none";
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
