@@ -25,46 +25,93 @@
         </div>
 
         <div id="work">
+            <h1 class = "sectionheader">WORK</h1>
             <div class="row">
                 <div class="column" id="gt" >
-                    <h1 class="jobtitle">Google</h1>
+                    <h2 class="jobtitle">Google</h2>
                 </div>
                 <div class = "column" id="gd">
-                    <p class = "jobdescp"> STEP Intern</p>
-                    <p class = "jobdescp"> kgjnkbdjbsnbknbkjsnbsgnbkjsgnbknsgkjbsbnskgjbjbnbkjsnbkjnbkj</p>
+                    <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> STEP Intern</p>
+                    <p class = "jobdescp"style="color:#fdfd96"> kgjnkbdjbsnbknbkjsnbsgnbkjsgnbknsgkjbsbnskgjbjbnbkjsnbkjnbkj</p>
                     </div>
                 </div>
             
 
             <div class="row">
                 <div class="column" id ="ft">
-                    <h1 class="jobtitle">Fidelity Investements</h1>
+                    <h2 class="jobtitle">Fidelity Investements</h2>
                 </div>
                 <div class = "column" id = "fd">
-                    <p class = "jobdescp"> SWE Intern</p>
-                    <p class = "jobdescp"> kgjnkbdjbsnbknbkjsnbsgnbkjsgnbknsgkjbsbnskgjbjbnbkjsnbkjnbkj</p>
+                    <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> SWE Intern</p>
+                    <p class = "jobdescp" style="color:#fdfd96"> kgjnkbdjbsnbknbkjsnbsgnbkjsgnbknsgkjbsbnskgjbjbnbkjsnbkjnbkj</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="column" id = "ot">
-                    <h1 class ="jobtitle">Open Vision Technology</h1>
-                </div>
+                    <h2 class ="jobtitle">Open Vision Technology</h2>
+                    </div>
                 <div class = "column" id = "od">
-                    <p class = "jobdescp"> Technical Intern</p>
-                    <p class = "jobdescp"> kgjnkbdjbsnbknbkjsnbsgnbkjsgnbknsgkjbsbnskgjbjbnbkjsnbkjnbkj</p>
+                    <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> Technical Intern</p>
+                    <p class = "jobdescp" style="color:#fdfd96"> kgjnkbdjbsnbknbkjsnbsgnbkjsgnbknsgkjbsbnskgjbjbnbkjsnbkjnbkj</p>
                 </div>
             </div>
 
         </div>
 
         <div id="projects">
-            
+            <h1 class = "sectionheader">PROJECTS</h1>
+            <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <p class = "projname">1984 Graphics</p>
+    <p class="projdesc"> Developed application for theatre productions in which allowed non-technical users to create graphics that could interact in real-time with actors in a theatre production.</p>
+  </div>
+
+  <div class="mySlides">
+    <p class = "projname">Avatar API</p>
+    <p class="projdesc">An API using the Flask Framwork that holds quantified and structured data from the universe of Avatar the Last Airbender and Legend of Korra.</p>
+  </div>
+
+  <div class="mySlides">
+    <p class = "projname">Artefatto</p>
+    <p class="projdesc">A website built for BostonHacks. It displays data from past events, the history of BostonHacks, and a list of the current organizers on the team.</p>
+</div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
         </div>
         <!-- <div id= "contact">
             <h2 class="contacth">Let's Chat</h2>
             <p class="contactp">Although I am not currently looking for any new opportunities, my inbox is always open for question or just wanting to say hi!</p>
         </div> -->
-        
+        <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
     </body>
 </html>
