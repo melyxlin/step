@@ -12,22 +12,37 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
+var sp;
+var type;
+
+function pageFunction() {
+    myVar = setTimeout(showPage, 3500);
+    type = setTimeout(typeWriter, 4000);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display="none";
+    document.getElementById("navbar").style.display = "block";
+    document.getElementById("landing").style.display = "block"
+    document.getElementById("scrollup").style.display = "block";
+    document.getElementById("scrolldown").style.display = "block"
+    document.getElementById("about").style.display = "block"
+    document.getElementById("work").style.display = "block"
+    document.getElementById("projects").style.display = "block"
+    document.getElementById("contact").style.display = "block";
+
+    document.getElementById("footer").style.display = "block";
+}
+
 
 var i = 0;
-var txt = 'Melissa is a born and raised Bostonian and is a current Junior at Boston University majoring in Computer Science. She is passionate about creating things that can better the lives around her. Her goal is to always build products that makes lives easier and enjoying for everyone. If she is not coding, Melissa can be found running or eating a very big bowl of instant noodle (preferably Shin).';
-var speed = 400;
-
-window.addEventListener('scroll', function() {
-  typeWriter();
-});
+var txt = 'I am a Bostonian 📍, Coder 👩‍💻, and Noodle Enthusiast 🍜.'
+var speed = 50;
 
 //function for typing effect on screen
 function typeWriter() {
     if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
+    document.getElementById("subheading").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }

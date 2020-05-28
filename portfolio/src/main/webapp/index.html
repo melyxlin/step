@@ -2,59 +2,64 @@
 <html>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
         <meta charset="UTF-8">
         
-        <title>My Portfolio</title>
+        <title>Melissa Lin</title>
         
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 
         <script src="script.js"></script>
     </head>
-    <body >
+    <body onload="pageFunction()">
+        <div id="loader"><iframe id="gif" src="https://giphy.com/embed/hnmOKl3oUd5U4" width="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        <a id="scrollup" href="#">☝️</a>
+        <a id="scrolldown" href="#contact">👇</a>
+
+
         <!-- Navbar -->
         <div id="navbar">
             <a style="float:left; color:white; padding-left:20px; font-size:30px;">Melissa Lin </a>
+            <a href="#landing" class="single" style="color:#b19cd9">resume</a>
             <a class="single" href="#contact"onclick="clickSingleA(this)">contact</a>
             <a href="#projects" class="single"onclick="clickSingleA(this)">projects</a>
             <a href="#work" class="single" onclick="clickSingleA(this)">work</a>
             <a href="#about" class="single" onclick="clickSingleA(this)">about</a>
-            <a href="#landing" class="single" onclick="clickSingleA(this)">home</a>
         </div>
         
         <!-- Landing Page -->
-        <div id="landing">
+        <div id="landing" onload="typeWriter()">
             <div class="row">
                 <div>
-                    <h1 class="landheading">Melissa Lin</h1>
+                    <p class="landheading">Hello there! <span class="wave">👋</span></p>
+                    <p class="landheading">My name is <span> <b> Melissa Lin </b></span></p>
+                    <p class="landheading"> <span id="subheading"></span></p>
                 </div>
-            </div>
-            <div class "row" style="text-align:center; margin-bottom:10px;">
-                <img src="images/26369313.jpeg" alt="Melissa" style="border-radius:50%">
-            </div>
-            <div class="row">
-                <p class="subheading"><span style="color:#b19cd9">Bostonian.</span> <span style=" color:#fdfd96">Coder.</span> <span style="color:#b2d8d8">Noodles Enthusiast.</p>
             </div>
         </div>
 
         <!-- About -->
         <div id = "about" >
-            <h1 class="bio"></h1> 
+            <h1 class = "sectionheader">Biography</h1>
+                 <p id="bio" >I am a born and raised Bostonian and am a current junior at Boston University majoring in Computer Science. Currently I am a STEP Intern at Google. If I am not coding, I can be found running, reading, or eating a big bowl of noodles. </h1>
         </div>
 
         <!-- Work -->
         <div id="work">
-            <h1 class = "sectionheader">WORK</h1>
+            <h1 class = "sectionheader">Work</h1>
             <!-- Google Row -->
             <div class="row">
                 <div class="column" id="googletitle" >
-                    <h2 class="jobtitle">Google</h2>
+                    <p class="jobtitle">Google</p>
                 </div>
                 <div class = "column" id="googledescp">
                     <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> STEP Intern</p>
                     <p class = "jobdescp" style="color:#b2d8d8; font-size: 15px"> May 2020 - Aug 2020</p>
-                    <ul class = "jobdescp"style="color:#fdfd96"> 
-                        <li>Working with the Google Cloud Security Team.</li>
+                    <ul class = "jobdescp"style="color:#fdfd96; font-size:20px"> 
+                        <li>TBD</li>
                     </ul>
                 </div>
             </div>
@@ -62,12 +67,12 @@
             <!-- Fidelity Row -->
             <div class="row">
                 <div class="column" id ="fidelitytitle">
-                    <h2 class="jobtitle">Fidelity Investements</h2>
+                    <p class="jobtitle">Fidelity Investements</p>
                 </div>
                 <div class = "column" id = "fidelitydescp">
                     <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> SWE Intern</p>
                     <p class = "jobdescp" style="color:#b2d8d8; font-size: 15px"> May 2019 - Aug 2019</p>
-                    <ul class = "jobdescp"style="color:#fdfd96"> 
+                     <ul class = "jobdescp"style="color:#fdfd96; font-size:20px"> 
                         <li>Built a testreporting application for Fidelity’s QA department utilizing Java Spring and SQL servers for the backend and Angular for the frontend</li>
                         <li>Developed tools and frameworks in Java for Fidelity’s electronic trading platform to facilitate automated testing,reducing the time to report bugs by 20%</li>
                     </ul>
@@ -77,12 +82,12 @@
             <!-- OVT Row -->
             <div class="row">
                 <div class="column" id = "ovttitle">
-                    <h2 class ="jobtitle">Open Vision Technology</h2>
+                    <p class ="jobtitle">Open Vision Technology</p>
                 </div>
                 <div class = "column" id = "ovtdescp">
                     <p class = "jobdescp" style="color:#b19cd9; font-size:40px"> Technical Intern</p>
                     <p class = "jobdescp" style="color:#b2d8d8; font-size: 15px"> Jun 2018 - Aug 2019</p>
-                    <ul class = "jobdescp"style="color:#fdfd96">
+                    <ul class = "jobdescp"style="color:#fdfd96; font-size:20px">
                         <li>Developed and reviewed software for semiconductor wafer handling demo robots to use at various client meetings and showcases using C++</li>
                     </ul>
                 </div>
@@ -92,86 +97,37 @@
 
         <!-- Projects -->
         <div id="projects">
-        
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-                <h1 class = "sectionheader">PROJECTS</h1>
-            
-                <!-- Full-width slides/quotes -->
-                <div class="slides">
-                    <p class = "projname">1984 Graphics</p>
-                    <p class="projdesc"> Developed application for theatre productions in which allowed non-technical users to create graphics that could interact in real-time with actors in a theatre production.</p>
-                    <div class="marquee">
-                        <p>  Processing&nbsp; OpenCV</p>
-                    </div>
-                </div>
-            
-                <div class="slides">
+            <h1 class = "sectionheader">Projects</h1>
+            <div class="row">
+                <div class="column"  >
                     <p class = "projname">Avatar API</p>
-                    <p class="projdesc">An API using the Flask Framwork that holds quantified and structured data from the universe of Avatar the Last Airbender and Legend of Korra.</p>
-                    <div class="marquee">
-                        <p>  HTML &nbsp;CSS&nbsp; Python&nbsp; Flask &nbsp;Heroku</p>
-                    </div>
+                        <p class="projdesc" style="margin-right:10px">An API using the Flask Framwork that holds quantified and structured data from the universe of Avatar the Last Airbender and Legend of Korra.</p>
+                        <div class="marquee">
+                            <p>  HTML &nbsp;CSS&nbsp; Python&nbsp; Flask &nbsp;Heroku</p>
+                        </div>
+                        <p class="landheading" style="font-size:1rem"> <span class="wave">👉</span>  Check it out <a href="https://github.com/melyxlin/avatar-api" class="link">here!</a> </p>
                 </div>
-            
-                <div class="slides">
-                    <p class = "projname">Artefatto</p>
-                    <p class="projdesc">A website built for BostonHacks. It displays data from past events, the history of BostonHacks, and a list of the current organizers on the team.</p>
-                    <div class="marquee">
-                        <p>HTML	&nbsp; CSS &nbsp; JavaScript &nbsp; Bootstrap</p>
-                    </div>
+                <div class="column">
+                    <img src="images/avatarex.png" style="width:100%">
                 </div>
-            
-                <!-- Next/prev buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
             </div>
-
         </div>
         
-            <!-- Contact -->
-            <div id= "contact">
-            <h1 class = "sectionheader">LET'S CHAT!</h1>
-            <!-- Paragraph for icons -->
-            <p class="icons">
-                <a href="https://github.com/melyxlin" class="icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/melyxlin/" class="icon"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:melyxlin@gmail.com" class="icon"><i class="fas fa-envelope-square"></i></a>
-            </p>
-            
+        <!-- Contact -->
+        <div id= "contact">
+            <h1 class = "sectionheader">Contact</h1>
+            <p class="landheading" style="font-size:1.5rem">  Let's Chat! Whether you have a question or want to talk about noodles, I'll try my best to get back to you ASAP! </p>
+            <p class="landheading" style="text-align:center; font-size:1.3rem"><span class="wave">👉</span><a href="mailto:melyxlin@google.com" class="link">&nbsp;Say Hello&nbsp;</a> <span class="wave">👈</span></p>
         </div>
-        <!-- Script to for Slideshow -->
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            //advances slides
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            //shows current slides
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            //function to display slide
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                if (n > slides.length) {
-                    slideIndex = 1
-                }    
-                if (n < 1) {
-                    slideIndex = slides.length
-                }
-                for (i = 0; i < slides.length; i++){
-                    slides[i].style.display = "none";  
-                }
-                slides[slideIndex-1].style.display = "block";  
-            }
-        </script>
+        
+        <div id="footer">
+            <a style="float:left; color:white; padding-left:20px; font-size:0.8rem; text-align:left">Designed and Developed by <br> Melissa Lin 2020 </a>
+            <a href="mailto:melyxlin@google.com" >Email</a>
+            <a href="https://github.com/melyxlin" >Github</a>
+            <a href="https://www.linkedin.com/in/melyxlin/" >Linkedin</a>
+        </div>
+         
+         
 
         <!-- Script to make navbar stick -->
         <script>
@@ -181,15 +137,15 @@
             };
             var navbar = document.getElementById("navbar");
             var sticky = navbar.offsetTop;
-    //function to make navbar stick
-    function stickyScroll() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        }
-        else {
-            navbar.classList.remove("sticky");
-        }
-    }
+            //function to make navbar stick
+            function stickyScroll() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                }
+            else {
+                navbar.classList.remove("sticky");
+            }
+            }  
         </script>
     </body>
 </html>
