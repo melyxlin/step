@@ -39,7 +39,7 @@ function showPage() {
 
 
 var i = 0;
-var txt = 'I am a Bostonian 📍, Coder 👩‍💻, and Noodle Enthusiast 🍜.'
+var txt = "I am a Bostonian 📍, Coder 👩‍💻, and Noodle Enthusiast 🍜."
 var speed = 50;
 
 //function for typing effect on screen
