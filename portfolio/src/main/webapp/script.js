@@ -30,6 +30,7 @@ function showPage() {
     document.getElementById("work").style.display = "block"
     document.getElementById("projects").style.display = "block"
     document.getElementById("contact").style.display = "block";
+    document.getElementById("content").style.display = "block";
 
     document.getElementById("footer").style.display = "block";
 }
@@ -59,4 +60,10 @@ function clickSingleA(a)
     }
 
     a.className = 'active';
+}
+
+function getMessage() {
+  fetch('/data').then(response => response.text()).then((message) => {
+    document.getElementById('message-container').innerText = message;
+  });
 }
