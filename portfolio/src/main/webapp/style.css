@@ -12,6 +12,7 @@ body{
     right: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
     display: none;
+    text-decoration: none;
 }
 
 #scrolldown{
@@ -20,6 +21,7 @@ body{
     bottom:50px;
     z-index: 99;
     display: none;
+    text-decoration: none;
 }
 
 /*column and row objects*/
