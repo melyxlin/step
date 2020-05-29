@@ -14,10 +14,12 @@
 
 var sp;
 var type;
+var c;
 
 function pageFunction() {
     myVar = setTimeout(showPage, 3500);
     type = setTimeout(typeWriter, 4000);
+    c = setTimeout(getComments, 3500);
 }
 
 function showPage() {
@@ -30,6 +32,7 @@ function showPage() {
     document.getElementById("work").style.display = "block"
     document.getElementById("projects").style.display = "block"
     document.getElementById("contact").style.display = "block";
+    document.getElementById("content").style.display = "block";
 
     document.getElementById("footer").style.display = "block";
 }
@@ -59,4 +62,32 @@ function clickSingleA(a)
     }
 
     a.className = 'active';
+}
+
+// function getMessage() {
+//   fetch('/data').then(response => response.text()).then((message) => {
+//     document.getElementById('message-container').innerText = message;
+//   });
+
+// }
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+function getComments(){
+    fetch('/data')  // sends a request to /my-data-url
+    .then(response => response.json()) // parses the response as JSON
+    .then((comments) => { // now we can reference the fields in myObject!
+        const commentsListElement = document.getElementById('message-container');
+        commentsListElement.innerHTML = '';
+        for (i=0; i<comments.length;i++){
+            console.log(comments[i]);
+            commentsListElement.appendChild(
+            createListElement(comments[i]));
+        }
+    });
 }
